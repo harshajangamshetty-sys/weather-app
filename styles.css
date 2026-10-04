@@ -1,0 +1,123 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial , serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background 0.4s ease;
+}
+
+.container[data-weather='clouds'] {
+    background: linear-gradient(135deg, #bdc3c7, #8e9eab);
+}
+.container[data-weather='clear'] {
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+.container[data-weather='rain'] ,
+.container[data-weather='drizzle'] {
+    background: linear-gradient(135deg, #667db6, #485563);
+    color: white;
+}
+.container[data-weather='thunderstorm'] {
+    background: linear-gradient(135deg, #373b44, #4286f4);
+    color: white;
+}
+.container[data-weather="snow"] {
+    background: linear-gradient(135deg, #e6dada, #a8c0ff);
+}
+.container[data-weather="mist"],
+.container[data-weather="fog"],
+.container[data-weather="haze"],
+.container[data-weather="smoke"] {
+    background: linear-gradient(135deg, #d7d2cc, #8e9eab);
+}
+
+.container[data-weather='clouds'],
+.container[data-weather='clear'],
+.container[data-weather='snow'],
+.container[data-weather='mist'],
+.container[data-weather='fog'],
+.container[data-weather='haze'],
+.container[data-weather='smoke'] {
+    color: #1E1E1E;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    outline: none;
+    font-size: medium;
+}
+
+button {
+    width: 25%;
+    padding: 10px;
+    background-color: #6200EA;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: medium;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3700B3;
+}
+
+#weather-info {
+    margin-top: 40px;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: #FF5722;
+    margin-top: 20px;
+}
+
+#weather-emoji {
+    font-size: 8rem;
+    display: block;
+}
+
+#description {
+    font-weight: bold;
+}
